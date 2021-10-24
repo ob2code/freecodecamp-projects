@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Landing Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            crossorigin="anonymous"
+        />
+        <style type="text/css">
+            :link, :visited {
+            text-decoration: none;
+            }
+            ul, ol {
+                list-style: none;
+                }
+            h1, h2, h3, h4, h5, h6, pre, code, p {
+                font-size: 1em;
+                }
+            ul, ol, dl, li, dt, dd, h1, h2, h3, h4, h5, h6, pre, 
+            form, body, html, p, blockquote, fieldset, input {
+                padding: 0;
+                margin: 0;
+                }
+            a img, :link img, :visited img {
+                border: none;
+                }
+            address {
+            font-style: normal;
+            }
+            body{
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto','Helvetica Neue', Arial, sans-serif;
+                background-color: whitesmoke;
+                
+            }
+
+
+            #header{
+                position: fixed;
+                top: 0;
+                width: 100%;
+                /* background-color: darkgray; */
+                display: flex;
+                justify-content: space-around;
+                min-height: 70px;
+                align-items: center;
+                padding-top: 5px;
+                
+            }
+            #nav-bar{                
+                width: 300px;
+            }
+            #header ul{
+                display: flex;
+                justify-content: space-around;
+            }
+            #header-img{
+                width: 50px;
+            }
+            
+            #formContainer{
+                display: flex;
+                justify-content: center;
+                margin-top: 70px;
+            }
+            #form{                
+                
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                /* background-color: thistle; */
+                /* max-width: 700px;
+                width: 70%; */
+            }
+            #form h1{
+                font-size: 20px;
+            }
+            #form input[type='email']{
+                width: 275px;
+                max-width: 100%;
+                height: 25px;
+            }
+            #form input[type='submit']{
+                font-weight: bold;
+                color: white;
+            }
+            .btn{
+                background-color: rgb(57, 134, 235);
+                border: 0px;
+                height: 30px;
+                width: 100%;
+                max-width: 125px;
+            }
+
+            @media (max-width: 600px){
+                #header{
+                    flex-direction: column;
+                }
+                #header ul{
+                    flex-direction: column;
+                    align-items: center;
+                }
+                #formContainer{
+                    margin-top: 130px;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <header id="header">
+            <div class="logo"><img id="header-img" src="https://svgshare.com/i/bJk.svg" alt="logo"></div>
+            <nav id="nav-bar">
+                <ul>
+                    <li><a class="nav-link" href="#features">Features</a></li>
+                    <li><a class="nav-link" href="#introvid">How It Works</a></li>
+                    <li><a class="nav-link" href="#prices">Pricing</a></li>
+                </ul>               
+            </nav>
+        </header>
+
+        <div id="formContainer">
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <h1>The most gaming power you have ever held</h1>
+            <input id="email" name="email" type="email" placeholder="Enter your email address">
+            <input id="submit" type="submit" value="GET STARTED" class="btn"></input>
+        </form>
+        </div>
+
+
+
+    </body>
+</html>
