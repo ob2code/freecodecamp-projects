@@ -32,7 +32,7 @@
             body{
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto','Helvetica Neue', Arial, sans-serif;
                 background-color: whitesmoke;
-                
+                box-sizing: border-box;
             }
 
 
@@ -40,7 +40,7 @@
                 position: fixed;
                 top: 0;
                 width: 100%;
-                /* background-color: darkgray; */
+                background-color: darkgray;
                 display: flex;
                 justify-content: space-around;
                 min-height: 70px;
@@ -62,7 +62,7 @@
             #formContainer{
                 display: flex;
                 justify-content: center;
-                margin-top: 70px;
+                margin-top: 90px;
             }
             #form{                
                 
@@ -96,6 +96,54 @@
                 max-width: 125px;
             }
 
+            #featuresContainer{
+                display: flex;
+                justify-content: center;
+                margin-top: 70px;
+
+
+                /* debug */
+                /* background-color: burlywood; */
+                height: 1500px;
+                
+            }
+            #features{
+                width: 80%;
+                max-width: 1000px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+                /* debug */
+                
+                /* background-color: cadetblue; */
+            }
+            .section{
+                display: flex;
+                align-items: center;
+                
+            }
+            .feature_icon{
+                font-size: 5em;
+                width: 200px;
+                text-align: center;
+                color: darkgoldenrod;                
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+                /* debug */
+                /* background-color: cornflowerblue; */
+            }
+            .feature_desc{
+                width: 800px;                
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                /* debug */
+                /* background-color: chartreuse; */
+            }
+
             @media (max-width: 600px){
                 #header{
                     flex-direction: column;
@@ -106,6 +154,12 @@
                 }
                 #formContainer{
                     margin-top: 130px;
+                }
+                .feature_icon{
+                    display: none;
+                }
+                #features{
+                    width: 95%;
                 }
             }
 
@@ -124,13 +178,45 @@
         </header>
 
         <div id="formContainer">
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
-            <h1>The most gaming power you have ever held</h1>
-            <input id="email" name="email" type="email" placeholder="Enter your email address">
-            <input id="submit" type="submit" value="GET STARTED" class="btn"></input>
-        </form>
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <h1>The most gaming power you have ever held</h1>
+                <input id="email" name="email" type="email" placeholder="Enter your email address">
+                <input id="submit" type="submit" value="GET STARTED" class="btn"></input>
+            </form>
         </div>
 
+        <div id="featuresContainer">
+            <div id="features">
+                <section class="section">
+                    <div class="feature_icon">
+                        <i class="fas fa-chess-knight" aria-hidden="true"></i>
+                    </div>
+                    <div class="feature_desc">
+                        <h1>All-in-one portable PC gaming</h1>
+                        <p>Steam Deck brings the Steam games and features you love to a powerful and convenient form factor that you can take wherever you go.</p>
+                    </div>
+                </section>
+                <section class="section">
+                    <div class="feature_icon">
+                        <i class="fas fa-chess-queen" aria-hidden="true"></i>
+                    </div>
+                    <div class="feature_desc">
+                        <h1>Your Steam library is already on your Deck.</h1>
+                        <p>Just power it on and log in. Your games and your friends are here.</p>
+                    </div>
+                </section>
+                <section class="section">
+                    <div class="feature_icon">
+                        <i class="fas fa-chess-king" aria-hidden="true"></i>
+                    </div>
+                    <div class="feature_desc">
+                        <h1>Steam, without compromises</h1>
+                        <p>All of the features you know and love, designed with care to fit in your hands</p>
+                    </div>
+                </section>
+            </div>
+
+        </div>
 
 
     </body>
