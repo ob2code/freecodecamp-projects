@@ -9,6 +9,11 @@
             crossorigin="anonymous"
         />
         <style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
             :link, :visited {
             text-decoration: none;
             }
@@ -34,6 +39,7 @@
                 background-color: whitesmoke;
                 box-sizing: border-box;
             }
+
 
 
             #header{
@@ -72,9 +78,9 @@
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-                /* background-color: thistle; */
-                /* max-width: 700px;
-                width: 70%; */
+                background-color: thistle;
+                /* min-width: 700px; */
+                width: 100%; 
             }
             #form h1{
                 font-size: 20px;
@@ -100,15 +106,15 @@
                 display: flex;
                 justify-content: center;
                 margin-top: 70px;
-
+                /* align-items: center; */
 
                 /* debug */
                 /* background-color: burlywood; */
-                height: 1500px;
-                
+                /* height: 1500px; */
+                /* flex-direction: column; */
             }
             #features{
-                width: 80%;
+                width: 100%;
                 max-width: 1000px;
                 display: flex;
                 flex-direction: column;
@@ -135,13 +141,25 @@
                 /* background-color: cornflowerblue; */
             }
             .feature_desc{
-                width: 800px;                
+                width: 800px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
 
                 /* debug */
                 /* background-color: chartreuse; */
+            }
+
+            #vidContainer{
+                display: flex;
+                justify-content: center;
+                margin-top: 70px;
+            }
+
+            #video{
+                /* max-width: 560px; */
+                width: 560px;
+                background-color: brown;
             }
 
             @media (max-width: 600px){
@@ -158,9 +176,17 @@
                 .feature_icon{
                     display: none;
                 }
-                #features{
-                    width: 95%;
+                .feature_desc{
+                    text-align: center;
                 }
+                #features{
+                    width: 100%;
+                }
+                #video{
+                /* max-width: 560px; */
+                width: auto;
+                background-color: brown;
+            }
             }
 
         </style>
@@ -215,9 +241,17 @@
                     </div>
                 </section>
             </div>
-
+            
         </div>
+        
 
+        <div id="vidContainer">
+            <div id="introvid">
+                <!-- <iframe id="video" height="315" width="560" src="https://www.youtube-nocookie.com/embed/AlWgZhMtlWo?rel=0&controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe> -->
+                <iframe id="video" height="315" src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&amp;controls=0&amp;showinfo=0"
+                 frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
 
     </body>
 </html>
