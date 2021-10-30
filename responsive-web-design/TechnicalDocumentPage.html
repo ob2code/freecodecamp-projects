@@ -49,41 +49,37 @@
             }
             /* Page Styles */
             #page-container{
-                background-color: black;
+                background-color: #ddd;
                 display: flex;
             }
+            /* Navigator bar */
             #navbar{
                 width: 300px;
                 min-width: 300px;
                 height: 100vh;
                 position: fixed;
                 overflow: auto;
-                
-                /* debug */
+                border-right: 2px solid rgb(119, 119, 119);
+                border-bottom: 2px solid rgb(119, 119, 119);               
                 background-color: #ddd;
                 
             }
-            #main-doc{
-                background-color: chocolate;
-                width: 300px;
-                width: 100%;
-                height: 1400px;
+            #document-title{
                 
+                font-weight: bold;
+                font-size: 20px;
+                padding: 15px 20px;
             }
-            ul{
+            nav ul{
                 display: flex;
-                flex-direction: column;
-                
-                /* row-gap: 40px; */
+                flex-direction: column;                
             }
-            li{
+            nav li{
                 border-top: 1px solid;
-                height: 50px;
-                
+                height: 40px;                
                 display: flex;
                 align-items: center;
             }
-
             .nav-link{
                 padding-left: 20px;
                 color: dimgray;
@@ -92,18 +88,72 @@
                 font-weight: bold;
                 color: rgb(83, 83, 83);
             }
+            /* Main document */
+            #main-doc{
+                /* background-color: chocolate; */
+                width: calc(100% - 300px);
+                /* height: 1400px; */
+                left: 300px;
+                position: relative;
+                padding: 20px;
+                
+            }
+            .main-section{
+                margin-top: 10px;
+                margin-bottom: 40px;                
+            }
+
+            article{
+                margin-left: 10px;
+            }
+            section p{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            
+            section ul{
+                list-style-type: circle;
+                padding-left: 60px;          
+            }
+            section li{
+                padding-top: 5px;
+            }
+
+            section ol{
+                list-style-type:decimal;
+                padding-left: 60px;  
+            }
+
+            code{
+                display: block;
+                text-align: left;
+                white-space: pre-line;
+                position: relative;
+                word-break: normal;
+                word-wrap: normal;
+                line-height: 2;
+                background-color: #f1f1f1;
+                padding: 15px;
+                margin: 10px;
+                border-radius: 5px;
+            }
+            /* ======== Media Query ========*/
             @media (max-width: 600px) {
                 #page-container{
-                    background-color: black;
                     flex-direction: column;
                 }
                 #navbar{
                     width: 100%;
-                    height: 50px;
-                    background-color: cadetblue;
+                    height: 150px;
+                    position: static;
+                    
                 }
                 #main-doc{
                     width: 100%;
+                    left: auto;
+                    position: static;
+                    padding: 20px 20px 50px 20px;
+                    
                 }
             }
         </style>
@@ -111,37 +161,151 @@
     <body>
         <div id="page-container">
             <nav id="navbar">
-
+                <header><h1 id="document-title">📺 Reference Book</h1></header>
                 <ul>
                     <li><a class="nav-link" href="#Introduction">Introduction</a></li>
                     <li>
-                      <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
+                      <a class="nav-link" href="#How_to_carry_the_TV">How to carry the TV</a>
                     </li>
                     <li>
-                      <a class="nav-link" href="#JavaScript_and_Java">JavaScript and Java</a>
+                      <a class="nav-link" href="#Preparation_for_a_Table-Top_stand">Preparation for a Table-Top stand</a>
                     </li>
-                    <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
-                    <li><a class="nav-link" href="#Variables">Variables</a></li>
+                    <li><a class="nav-link" href="#Using_a_Wall-Mount_Bracket">Using a Wall-Mount Bracket</a></li>
+                    <li><a class="nav-link" href="#Installing_the_Wall-Mount_Bracket">Installing the Wall-Mount Bracket</a></li>
                     <li>
-                      <a class="nav-link" href="#Declaring_variables">Declaring variables</a>
+                      <a class="nav-link" href="#Installation_against_a_wall">Installation against a wall</a>
                     </li>
-                    <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
-                    <li><a class="nav-link" href="#Global_variables">Global variables</a></li>
-                    <li><a class="nav-link" href="#Constants">Constants</a></li>
-                    <li><a class="nav-link" href="#Data_types">Data types</a></li>
-                    <li>
-                      <a class="nav-link" href="#if...else_statement">if...else statement</a>
-                    </li>
-                    <li><a class="nav-link" href="#while_statement">while statement</a></li>
-                    <li>
-                      <a class="nav-link" href="#Function_declarations">Function declarations</a>
-                    </li>
-                    <li><a class="nav-link" href="#Reference">Reference</a></li>
+                    <li><a class="nav-link" href="#Bundling_the_connecting_cables">Bundling the connecting cables</a></li>
+                    <li><a class="nav-link" href="#Securing_the_TV">Securing the TV</a></li>
+                    <li><a class="nav-link" href="#Reference">Reference</a></li>  
                   </ul>
 
             </nav>
             <main id="main-doc">
-                y
+                <section class="main-section" id="Introduction">
+                    <header><h1>Introduction</h1></header>
+                    <article>
+                        <p>Welcome to the Sony Online Reference Book.</p>
+                        <p>This manual is a part of Sony’s eco-friendly initiatives to help reduce the consumption of natural resources. Use the printed Operating Instructions, the Quick Setup
+Guide, and this online Reference Book to fully enjoy your TV.</p>
+                    </article>                    
+                </section>
+                <section class="main-section" id="How_to_carry_the_TV">
+                    <header><h1>How to carry the TV</h1></header>
+                    <article>
+                        <p>Some TV models are packaged with a detached Table-Top Stand so you can mount your TV to a wall right
+                            away. If you are not mounting the TV to a wall, you will need to attach the Table-Top Stand. You will need
+                            a Phillips screwdriver and the supplied screws to complete the task. Look for the attachment instructions
+                            provided with the TV.</p>
+                        <p>Be sure to consider the following while setting up your TV:</p>
+                        <ul>
+                            <li>Disconnect all cables when carrying the TV.</li>
+                            <li>Carry the TV with the adequate number of people; larger size TVs require two or more people.</li>
+                            <li>Correct hand placement while carrying the TV is very important for safety and to avoid damage.</li>
+                            <li>Ensure your TV has adequate ventilation.</li>
+                            <li>For best picture quality, do not expose the screen to direct illumination or sunlight.</li>
+                        </ul>
+                    </article>                    
+                </section>
+                <section class="main-section" id="Preparation_for_a_Table-Top_stand">
+                    <header><h1>Preparation for a Table-Top Stand</h1></header>
+                    <article>
+                        <p>Follow the assembling steps required to place on a TV stand.</p>
+                        <p>Remove the Table-Top Stand. For product protection and safety reasons, Sony strongly recommends
+                            that you use the screws provided with the TV.</p>
+                        <code>if (true) { var x = 5; } console.log(x); // 5</code>
+                        <p>Place the Table-Top Stand on a level and stable surface.</p>
+                        <code>// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS WILL
+                            CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements
+                            }</code>
+                        <p>Gently slide the TV unit onto the neck of the Table-Top Stand and align the screw holes.</p>
+                        <code>const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";</code>
+                        <p>Use the supplied screws to attach the TV unit to the Table-Top Stand (refer to the “Attaching the TableTop Stand” flyer found inside the carton). If an electric screwdriver is used, set the torque to tighten at
+                            approximately 1.5 N·m, 15 Kgf·cm. </p>
+                        <code>if (condition_1) { statement_1; } else if (condition_2) { statement_2;
+                        } else if (condition_n) { statement_n; } else { statement_last; }</code>
+                        <code>if (condition) { statement_1_runs_if_condition_is_true;
+                            statement_2_runs_if_condition_is_true; } else {
+                            statement_3_runs_if_condition_is_false;
+                            statement_4_runs_if_condition_is_false; }</code>
+                        
+                    </article>                    
+                </section>
+                <section class="main-section" id="Using_a_Wall-Mount_Bracket">
+                    <header><h1>Using a Wall-Mount Bracket</h1></header>
+                    <article>
+                        <p>Your TV can be mounted to a wall using the Wall-Mount Bracket (not supplied) out of the box as packaged.</p>
+                        <p>Prepare the TV for the Wall-Mount Bracket before making cable connections.</p>
+                        <p><strong>Sony strongly recommends that you use the Wall-Mount Bracket model designed for your TV and that wall-mounting of your TV should be
+                            performed by a Sony dealer or licensed contractor. </strong></p>
+                        
+                    </article>                    
+                </section>
+                <section class="main-section" id="Installing_the_Wall-Mount_Bracket">
+                    <header><h1>Installing the Wall-Mount Bracket</h1></header>
+                    <article>
+                        <p><strong>To Customers</strong></p>
+                        <p>For product protection and safety, Sony strongly recommends that you use the Wall-Mount Bracket designed for your TV (SU-WL500) and wall-mounting is
+                            performed by a Sony dealer or a licensed contractor. Do not attempt to install it yourself. Sony is not liable for any damage or injury caused by mishandling or
+                            improper installation.</p>
+                        <p>Please provide your licensed contractor with this installation information section as well as instructions supplied with the Wall-Mount Bracket. </p>
+                        <p><strong>To Sony Dealers and Licensed Contractors </strong></p>
+                        <p>To avoid injury and property damage, read these instructions carefully. Periodic inspection and maintenance is highly recommended to ensure that the TV is
+                            securely mounted.</p>
+                    </article>                    
+                </section>
+                <section class="main-section" id="Installation_against_a_wall">
+                    <header><h1>Installation against a wall</h1></header>
+                    <article>
+                        <p>Make sure that your TV has adequate air circulation. Allow enough space around the TV as shown below.
+                            Avoid operating the TV at temperatures below 41 °F (5 °C). </p>
+                        <p><strong>Consider the following for best picture quality</strong></p>
+                        <ul>
+                            <li>Do not expose the screen to direct illumination or sunlight.</li>
+                            <li>Use spot lighting directed down from the ceiling or cover the windows that face the screen with opaque drapery.</li>
+                            <li>Install the TV in a room where the floor and walls are not of a reflective material.</li>
+                            <li>When moving the TV from a cold area to a warm area, sudden change in room temperature may cause the TV’s picture to blur or show
+                                poor color due to moisture condensation. Should this occur, please wait a few hours to allow the moisture to evaporate before
+                                powering on the TV.</li>
+                            
+                        </ul>
+                    </article>                    
+                </section>
+                <section class="main-section" id="Bundling_the_connecting_cables">
+                    <header><h1>Bundling the connecting cables</h1></header>
+                    <article>                        
+                        <p>Use the attached cable clamper to bundle the connecting cables. The cable clamper is located on the
+                            Table-Top Stand as illustrated.
+                            Do not bundle the AC power cord with other connecting cables. This can affect the picture quality.</p>
+                        <p>When using a Wall-Mount Bracket, your connected cables can be clamped to an alternate location. Follow
+                            the steps below. </p>
+                        <ol>
+                            <li>Remove the cable clamper from the Table-Top Stand using a Phillips screwdriver (not supplied).</li>
+                            <li>Make sure that the tip of the plastic fastener you removed is closed as shown in (2).</li>
+                            <li>Locate the alternate hole to attach the cable clamper on the TV rear cover as shown in (3). Push the
+                                fastener into the hole.</li>
+                            <li>Bundle the cables and close the clamper.</li>
+                        </ol>
+                    </article>                    
+                </section>
+                <section class="main-section" id="Securing_the_TV">
+                    <header><h1>Securing the TV</h1></header>
+                    <article>
+                        <p><strong>Use a Sony TV Stand</strong></p>
+                        <p>Use a Sony specified TV stand and follow the instruction manual provided with the Sony TV stand.
+                            If a Sony specified TV stand is not used, consider the following recommended measures. </p>
+                        <p>Please provide your licensed contractor with this installation information section as well as instructions supplied with the Wall-Mount Bracket. </p>
+                        <p><strong>Recommended Measures to Secure the TV</strong></p>
+                        <p>Make sure the TV stand can adequately support the weight of the TV. Use two angle braces (not supplied)
+                            to secure the stand. For each angle brace use the appropriate hardware to:</p>
+                    </article>                    
+                </section>
+                <section class="main-section" id="Reference">
+                    <header><h1>Reference</h1></header>
+                    <article>
+                        <p>All the documentation in this page is taken from Sony USA <a href="https://www.sony.com/electronics/support/res/manuals/W000/W0005788M.pdf">link</a></p>                        
+                    </article>                    
+                </section>
             </main>
         </div>
         
