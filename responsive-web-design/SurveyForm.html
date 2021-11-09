@@ -1,28 +1,106 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
-    <title>Survey Form</title>
-    <style>
-        body{
-            background-image: url("https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
-            /* background-position: center; */
-            background-size: cover;
-            background-repeat: no-repeat;
-            margin: 0;
-        }
-        #container{
-            background-color: burlywood;
-            
-            width: 200px;
-            height: 200px;
-        }
-    </style>
+
+<head></head>
+<title>Survey Form</title>
+<style>
+    body {
+        margin: 0;
+        font-family: sans-serif;
+        background-image: url("https://images.pexels.com/photos/2763927/pexels-photo-2763927.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        background-color: lightslategray;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-align: center;
+        color: white;
+        box-sizing: border-box;
+
+    }
+
+    header {
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    select {
+        margin-top: 8px;
+    }
+
+    #container {
+        background-color: darkslateblue;
+        border-radius: 5px;
+        opacity: 90%;
+        width: 500px;
+        margin: 0 auto;
+        padding: 40px 40px;
+        text-align: left;
+    }
+
+    #description {
+        font-style: italic;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .txtinput {
+        width: 100%;
+        border-radius: 5px;
+        border: 0px solid red;
+        height: 30px;
+        font-size: medium;
+        margin-top: 8px;
+        margin-bottom: 30px;
+    }
+
+    input[type=checkbox] {
+        /* display: block; */
+    }
+
+    textarea {
+        width: 100%;
+        height: 120px;
+        font-size: 1rem;
+    }
+</style>
+
 <body>
-    <h1 id="title">freeCodeCamp Survey Form</h1>
-    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <header>
+        <h1 id="title">freeCodeCamp Survey Form</h1>
+        <p id="description">Thank you for taking the time to help us improve the platform</p>
+    </header>
     <div id="container">
-      
+        <form id="survey-form">
+            <label id="name-label">Name</label><input id="name" type="text" placeholder="Enter your name"
+                class="txtinput" required>
+            <label id="email-label">Email</label><input id="email" type="email" placeholder="Enter your Email"
+                class="txtinput" required>
+            <label id="number-label">Age (optional)</label><input id="number" type="number" placeholder="Age" min="16"
+                max="80" class="txtinput">
+            <p>Which option best describes your current role?</p>
+            <select id="dropdown" class="txtinput">
+                <option selected disabled>Select current role</option>
+                <option>Student</option>
+                <option>Full Time Job</option>
+            </select>
+            <p>Would you recommend freeCodeCamp to a friend?</p>
+            <label><input name="recommend" type="radio" value="definitely">Definitely</label>
+            <label><input name="recommend" type="radio" value="maybe">Maybe</label>
+            <label><input name="recommend" type="radio" value="notsure">Not sure</label>
+            <p><br>What would you like to see improved? (Check all that apply)</p>
+            <label><input name="improved" type="checkbox" value="1">Front-end Projects</label>
+            <label><br><input name="improved" type="checkbox" value="2">Back-end Projects</label>
+            <label><br><input name="improved" type="checkbox" value="3">Data Visualization</label>
+            <br><br>
+            <p>Any comments or suggestions?</p>
+
+            <textarea name="message" placeholder="Enter comment here!"></textarea>
+            <button id="submit" type="submit">Submit</button>
+
+        </form>
     </div>
 </body>
+
 </html>
-        

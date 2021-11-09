@@ -1,176 +1,339 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Personal Portfolio Website</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
-    </head>
-    <style type="text/css">
-        * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
 
-            :link,
-            :visited {
-                text-decoration: none;
-            }
+<head>
+    <title>Personal Portfolio Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0c867811bd.js" crossorigin="anonymous"></script>
+</head>
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-            ul,ol {
-                list-style: none;
-            }
+    :link,
+    :visited {
+        text-decoration: none;
+    }
 
-            h1,h2,h3,h4,h5,h6,pre,code,p {
-                font-size: 1em;
-            }
+    ul,
+    ol {
+        list-style: none;
+    }
 
-            ul,ol,dl,li,dt,dd,h1,h2,
-            h3,h4,h5,h6,pre,form,
-            body,html,p,blockquote,
-            fieldset,
-            input {
-                padding: 0;
-                margin: 0;
-            }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    pre,
+    code,
+    p {
+        font-size: 1em;
+    }
 
-            a img,
-            :link img,
-            :visited img {
-                border: none;
-            }
+    ul,
+    ol,
+    dl,
+    li,
+    dt,
+    dd,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    pre,
+    form,
+    body,
+    html,
+    p,
+    blockquote,
+    fieldset,
+    input {
+        padding: 0;
+        margin: 0;
+    }
 
-            address {
-                font-style: normal;
-            }
+    a img,
+    :link img,
+    :visited img {
+        border: none;
+    }
 
-            body {                
-                font-family: 'Libre Baskerville', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;;
-                background-color: whitesmoke;
-                box-sizing: border-box;
-            }
-            /* Page Styles */
-            #header-section{
-                background-color: #FFC93C;
-                width: 100%;
-                top: 0;
-                position: fixed;                
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-            }
-            #navbar{
-                width: 100%;
-                max-width: 400px;
-                /* Debug */
-                /* background-color: pink; */
-            }
-            #navbar ul{                
-                display: flex;
-                justify-content: space-around;
-            }
-            #navbar li{                
-                font-size: 1.2rem;
-                
-            }
-            .navlink{
-                padding: 26px;
-                display: block;
-                color: #F8F5F1;
-            }
-            .navlink:hover{
-                background-color: #31326F;
-            }
+    address {
+        font-style: normal;
+    }
 
-            /* =====> Welcome section */
-            #welcome-section{
-                height: 100vh;
-                background-color:#F2EDD7;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+    body {
+        font-family: 'Libre Baskerville', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+        ;
+        background-color: whitesmoke;
+        box-sizing: border-box;
+    }
 
-            }
-            h1 {
-                font-size: 2rem;
-            }
-            /* =====> Projects section */
-            #projects-section{
-                background-color:#9DDFD3;
-            }
-            /* =====> Footer section */
-            #footer-section{
-                height: 100vh;
-                background-color:#F2EDD7;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+    /* Page Styles */
+    #header-section {
+        background-color: #FFC93C;
+        width: 100%;
+        top: 0;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
 
-            }
+    #navbar {
+        width: 100%;
+        max-width: 400px;
 
-            #contacts ul{
-                display: flex;
-            }
-            /* Media Query for X-small */
-            @media (max-width: 576px) {
-                #header-section{
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                }
-                #navbar ul{
-                    flex-direction: column;
-                    align-items: center;
-                }
-            }
-    </style>
-    <body>
-        <header id="header-section">
-            <div id="navbar">
-                <ul>
-                    <li><a class="navlink" href="#">About</a></li>
-                    <li><a class="navlink" href="#">Work</a></li>
-                    <li><a class="navlink" href="#">Contact</a></li>
-                </ul>
-            </div>
-        </header>
+    }
 
-        <div id="welcome-section">
-            <h1>Hey I am {Ob2code}</h1>
-            <p>[a newbie] frontend developer ;)</p>
+    #navbar ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #navbar li {
+        font-size: 1.2rem;
+
+    }
+
+    .navlink {
+        padding: 26px;
+        display: block;
+        color: #F8F5F1;
+    }
+
+    .navlink:hover {
+        background-color: #31326F;
+    }
+
+    /* =====> Welcome section */
+    #welcome-section {
+        height: 100vh;
+        width: 100%;
+        min-width: 330px;
+        background-color: #F2EDD7;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #welcome-section p {
+        margin-top: 5px;
+    }
+
+    /* =====> Projects section */
+    #projects-section {
+        background-color: #9DDFD3;
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+        min-width: 330px;
+    }
+
+    #projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-gap: 20px;
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+
+    }
+
+    .project-tile {
+        background-color: #31326F;
+        box-shadow: 1px 1px 2px rgb(0 0 0 / 50%)
+    }
+
+    .project-title {
+        color: #F8F5F1;
+        padding: 15px;
+
+    }
+
+    .project-image {
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+    }
+
+    .titlelnk {
+        text-decoration: none;
+        color: #F8F5F1;
+    }
+
+
+    .titlelnk:hover {
+        text-decoration: underline;
+        animation-name: rainbow;
+        animation-duration: 4s;
+    }
+
+    /* =====> Footer section */
+    #footer-section {
+        height: 100vh;
+        background-color: #F2EDD7;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-items: center;
+        width: 100%;
+        min-width: 330px;
+    }
+
+    #footer-section p {
+        font-size: 1.1rem;
+        margin: 10px;
+        color: #31326F;
+        font-style: italic;
+    }
+
+    #contacts {
+        width: 100%;
+        max-width: 700px;
+
+    }
+
+    #contacts ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #contacts li {
+        padding: 1rem 2rem;
+    }
+
+    .contactlnk {
+        text-decoration: none;
+        color: #31326F;
+        font-size: 1.2rem;
+    }
+
+    /* Media Query for X-small */
+    @media (max-width: 576px) {
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+    }
+
+
+
+    @keyframes rainbow {
+        0% {
+            color: #F8F5F1;
+        }
+
+        50% {
+            color: #9DDFD3;
+        }
+
+        75% {
+            color: #FFC93C;
+        }
+
+        100% {
+            color: #F8F5F1;
+        }
+    }
+</style>
+
+<body>
+    <header id="header-section">
+        <div id="navbar">
+            <ul>
+                <li><a class="navlink" href="#">About</a></li>
+                <li><a class="navlink" href="#projects-section">Work</a></li>
+                <li><a class="navlink" href="#contacts">Contact</a></li>
+            </ul>
         </div>
+    </header>
 
-        <div id="projects-section">
-            <h2>These are some of my projects</h2>
-            <div id="projects">
-                <article class="project">
-                    <div class="project-title">
-                        <p>Google Chrome</p>
-                    </div>
-                    <div class="project-screenshot">
-                        <img class="project-image" src="" alt="">
-                    </div>
-                </article>
-            </div>
+    <div id="welcome-section">
+        <h1>Hey I am {Ob2code}</h1>
+        <p>[a newbie] frontend developer ;)</p>
+    </div>
+
+    <div id="projects-section">
+        <h2>These are some of my projects</h2>
+        <div id="projects">
+            <article class="project-tile">
+                <div class="project-title">
+                    <p><a class="titlelnk" href="https://codepen.io/ob2code/full/eYEpEdL" target="_blank">Ada Lovelace
+                            Tribute</a></p>
+                </div>
+                <img class="project-image" src="https://i.ibb.co/X7dFPwv/tributtepage.png">
+            </article>
+            <article class="project-tile">
+                <div class="project-title">
+                    <p><a class="titlelnk" href="https://codepen.io/ob2code/full/eYEJXaE" target="_blank">Product
+                            Landing Page</a></p>
+                </div>
+
+                <img class="project-image"
+                    src="https://i.ibb.co/dkTvyhd/screencapture-localhost-3000-Product-Landing-Page-html-2021-11-09-21-30-24.jpg">
+
+            </article>
+            <article class="project-tile">
+                <div class="project-title">
+                    <p><a class="titlelnk" href="https://codepen.io/ob2code/full/ZEJyPJK" target="_blank">Technical
+                            Document Page</a></p>
+                </div>
+
+                <img class="project-image" src="https://i.ibb.co/2YPJngp/technicalpage.png">
+
+            </article>
+            <article class="project-tile">
+                <div class="project-title">
+                    <p><a class="titlelnk" href="https://codepen.io/ob2code/full/jOLWagy" target="_blank">Survey
+                            Form</a></p>
+                </div>
+                <img class="project-image" src="https://i.ibb.co/hKtY54W/surveryform.png">
+
+            </article>
+
         </div>
+        <a class="contactlnk" href="#" target="_blank">More projects coming soon..</a>
+    </div>
 
-        <footer id="footer-section">
-            <h2>Let's work together...</h2>
-            <p>How do you take your coffee?</p>
-            <div id="contacts">
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Github</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Send a email</a></li>
-                    <li><a href="#">Call me</a></li>
-                </ul>
-            </div>
-        </footer>
-        
-    </body>
+
+
+    <footer id="footer-section">
+        <h1>Let's work together...</h1>
+        <p>How do you take your coffee?</p>☕
+        <div id="contacts">
+            <ul>
+                <li><a class="contactlnk" href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a id="profile-link" class="contactlnk" href="https://github.com/ob2code" target="_blank"><i
+                            class="fab fa-github"></i> Github</a></li>
+                <li><a class="contactlnk" href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a class="contactlnk" href="mailto:huydhm@gmail.com"><i class="fas fa-at"></i> Send a email</a></li>
+                <li><a class="contactlnk" href="tel:(+84) 901234567"><i class="fas fa-mobile-alt"></i> Call me</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+</body>
+
 </html>
